@@ -72,11 +72,11 @@ function carouselImg() {
 
     // 帧动画
     function tab(offset) {
-        var duration = 400;
-        var interval = 10;
-        var speed = Math.ceil(offset / (duration / interval));
-        // console.log(speed);
-        var desOffset = parseInt(carousel.css("left")) + offset;
+        var duration = 400,
+            interval = 10,
+            speed = Math.ceil(offset / (duration / interval)),
+            // console.log(speed);
+            desOffset = parseInt(carousel.css("left")) + offset;
         // console.log("目标位置：" + desOffset);
         var t = setInterval(function () {
             isAnimating = true;
@@ -101,8 +101,7 @@ function carouselImg() {
     }
 
     //添加小圆点下标
-    var aDots = oDots.children();
-    var length = aDots.length;
+    var aDots = oDots.children(),length = aDots.length;
     for (var i = 0; i < length; i++) {
         aDots[i].idx = i + 1;
     }
@@ -121,8 +120,7 @@ function carouselImg() {
     });
     //改变小圆点选中状态
     function changeDots(curImgIdx) {
-        var aDots = oDots.children();
-        var length = aDots.length;
+        var aDots = oDots.children(),length = aDots.length;
         for (var i = 0; i < length; i++) {
             if (aDots[i].classList.contains("selected")) {
                 aDots[i].classList.remove("selected");
@@ -130,7 +128,7 @@ function carouselImg() {
             }
         }
         aDots[curImgIdx - 1].classList.add("selected");
-        // $(eve).addClass("selected").siblings().removeClass("selected");
+
     }
 
     function play() {
