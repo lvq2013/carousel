@@ -1,0 +1,51 @@
+@charset "UTF-8";
+main .slide-main{
+    width: 800px;
+    height:450px;
+    overflow: hidden;
+}
+main .carousel .carousel-content{
+    left:-800px;
+    overflow: hidden;
+}
+main .carousel .carousel-content img{
+    width: 800px;
+    height: 450px;
+}
+main .carousel span{
+    width: 42px;
+    height: 70px;
+    top: calc(50% - 35px);
+    background: url("../images/prenext.png") no-repeat;
+
+}
+main .carousel span.prev{
+    left: 0;
+    background-position: -84px 0;
+}
+main .carousel span.next{
+    right: 0;
+    background-position: -124px 0;
+}
+main .carousel:hover span.prev{
+    background-position: 0 0;
+}
+main .carousel:hover span.next{
+    background-position: -42px 0;
+}
+main .carousel ul {
+    height: 12px;
+    bottom: 40px;
+    right: 150px;
+}
+main .carousel ul li{
+    width: 8px;
+    height: 8px;
+    margin: 0 6px;
+    border:1px solid #eee;
+    border-radius: 100%;
+    cursor:pointer;
+}
+main .carousel ul li.selected{
+    background-color: #00CCFE;
+}
